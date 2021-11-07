@@ -18,7 +18,7 @@ class InstructorsController < ApplicationController
     def update
 
         update_instructor = Instructor.find(params[:id]).update(instructor_params)
-        render json: update_instructor
+        render json: update_instructor, status: :ok
 
     end
 
